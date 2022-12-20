@@ -7,6 +7,6 @@ router.get('/', controllers.getSuperheroes)
 router.get('/:id', controllers.getSuperhero)
 router.post('/', controllers.createSuperhero)
 router.put('/:id', controllers.updateSuperhero)
-// router.delete('/:id', controllers.deleteSuperhero)
+router.delete('/:id', controllers.deleteSuperhero)
 
 export default router

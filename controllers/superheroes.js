@@ -45,3 +45,18 @@ export const updateSuperhero = async (req, res) => {
     res.status(500).json({ error: error.message })
   }
 }
+
+export const deleteSuperhero = async (req, res) => {
+  try {
+    const deleted = await Superhero.findByIdAndDelete(req.params.id)
+
+    if (deleted) {
+      return res.status(200).send('Superhero deleted')
+    }
+
+    throw new Error('Superhero not found')
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ error: error.message })
+  }
+}
