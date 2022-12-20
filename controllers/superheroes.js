@@ -35,3 +35,13 @@ export const createSuperhero = async (req, res) => {
     res.status(500).json({ error: error.message })
   }
 }
+
+export const updateSuperhero = async (req, res) => {
+  try {
+    const superhero = await Superhero.findByIdAndUpdate(req.params.id, req.body)
+    res.status(201).json(superhero)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ error: error.message })
+  }
+}
