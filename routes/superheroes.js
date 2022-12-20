@@ -5,7 +5,7 @@ const router = Router()
 
 router.get('/', controllers.getSuperheroes)
 router.get('/:id', controllers.getSuperhero)
-// router.post('/', controllers.createSuperhero)
+router.post('/', controllers.createSuperhero)
 // router.put('/:id', controllers.updateSuperhero)
 // router.delete('/:id', controllers.deleteSuperhero)
 

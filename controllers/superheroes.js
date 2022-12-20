@@ -24,3 +24,14 @@ export const getSuperhero = async (req, res) => {
     res.status(500).json({ error: error.message })
   }
 }
+
+export const createSuperhero = async (req, res) => {
+  try {
+    const superhero = new Superhero(req.body)
+    await superhero.save()
+    res.status(201).json(superhero)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ error: error.message })
+  }
+}
