@@ -12,6 +12,7 @@ const seedHeroes = async () => {
 
     await db.dropDatabase()
     await Superhero.create(result)
+    console.log('Successfully seeded db with all superheroes')
     await db.close()
   } catch (error) {
     console.error(error)

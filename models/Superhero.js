@@ -1,7 +1,6 @@
 import mongoose from 'mongoose'
 
-let Superhero = new mongoose.Schema({
-  charaterID: Number,
+const Superhero = new mongoose.Schema({
   name: String,
   slug: String,
   powerstats: {
