@@ -3,6 +3,8 @@ import mongoose from 'mongoose'
 mongoose.set('returnOriginal', false)
 mongoose.set('strictQuery', false)
 
+const url = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/superhero-api'
+
 mongoose.connect('mongodb://127.0.0.1:27017/superhero-api').catch(err => {
   console.log(`Error connection to MongoDB: ${err.message}`)
 })
