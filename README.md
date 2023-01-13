@@ -2,6 +2,8 @@
 
 ### [Railway Link](https://superhero-api-production.up.railway.app/api/superheroes)
 
+#### Root path: https://superhero-api-production.up.railway.app
+
 ## Get list of all Superheroes
 
 ### Request
